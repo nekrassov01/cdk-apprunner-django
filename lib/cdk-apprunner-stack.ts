@@ -195,7 +195,7 @@ export class AppRunnerDemoStack extends Stack {
       "Allow resources in VPC connect to database"
     );
 
-    // Database security group
+    // Lambda function for secrets rotation security group
     const secretRotationFunctionSecurityGroupName = `${serviceName}-secret-security-group`;
     const secretRotationFunctionSecurityGroup = new ec2.SecurityGroup(this, "DBSecretRotationFunctionSecurityGroup", {
       securityGroupName: secretRotationFunctionSecurityGroupName,
